@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gráfica</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Dashboard Gráfica</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="vendas.html">Vendas</a></li>
+            <li><a href="orcamentos.html">Orçamentos</a></li>
+            <li><a href="relatorios.html">Relatórios</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Dashboard -->
+    <div class="dashboard-container">
+        <section class="cards">
+            <div class="card">
+                <h3>Total de Entradas</h3>
+                <p id="total-entradas">R$ 0,00</p>
+            </div>
+            <div class="card">
+                <h3>Total de Saídas</h3>
+                <p id="total-saidas">R$ 0,00</p>
+            </div>
+            <div class="card">
+                <h3>Saldo</h3>
+                <p id="saldo">R$ 0,00</p>
+            </div>
+        </section>
+
+        <!-- Lista de Produtos -->
+        <section class="list-section">
+            <h2>Lista de Produtos</h2>
+            <table id="product-list">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Produtos serão carregados aqui via JS -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Lista de Clientes -->
+        <section class="list-section">
+            <h2>Lista de Clientes</h2>
+            <table id="client-list">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Clientes serão carregados aqui via JS -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Gráfico de Vendas -->
+        <section class="chart-section">
+            <h2>Gráfico de Vendas</h2>
+            <canvas id="salesChart"></canvas>
+        </section>
+
+        <!-- Produtos Mais Vendidos -->
+        <section class="list-section">
+            <h2>Produtos Mais Vendidos</h2>
+            <table id="top-products">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade Vendida</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Produtos mais vendidos serão carregados aqui via JS -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

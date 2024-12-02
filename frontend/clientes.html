@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Vendas - Gráfica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="img/sifcoin.jpg" alt="Logo" class="logo">
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="vendas.html">Vendas</a></li>
+            <li><a href="orcamentos.html">Orçamentos</a></li>
+            <li><a href="relatorios.html">Relatórios</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+        </ul>
+    </nav>
+
+    <section id="vendas" class="sales-form-section">
+        <h2>Clientes</h2>
+        <button id="openModalBtn">Novo</button> <!-- Botão para abrir o modal -->
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Novo Cliente</h2>
+                <form id="formAdd" class="sales-form">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" required>
+
+                    <input type="checkbox" name="whatsapp" value="true" checked>
+                    <label for="cliente">Whatsapp</label> 
+
+                    <button type="submit">Registrar Cliente</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Seção de Relatórios -->
+        <div class="report-content" id="report-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>Whatsapp</th>
+                    </tr>
+                </thead>
+                <tbody id="report-table-body">
+                    <!-- As linhas de entradas e saídas serão geradas aqui -->
+                </tbody>
+            </table>
+        </div>
+        <!-- <button onclick="downloadPDF()">Baixar PDF</button> -->
+        <button onclick="window.print()">Imprimir</button>
+    </section>
+
+    <script src="clientes.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Vendas - Gráfica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="img/sifcoin.jpg" alt="Logo" class="logo">
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="vendas.html">Vendas</a></li>
+            <li><a href="orcamentos.html">Orçamentos</a></li>
+            <li><a href="relatorios.html">Relatórios</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+        </ul>
+    </nav>
+
+    <section id="orcamentos" class="budget-form-section">
+        <h2>Orçamento</h2>
+        <button id="openModalBtn">Novo</button> <!-- Botão para abrir o modal -->
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Novo Orçamento</h2>
+                <form class="budget-form" onsubmit="createBudget(event)">
+                    <label for="produto">Produto:</label>
+                    <select id="produto" name="produto-orcamento"></select>
+
+                    <label for="quantidade-orcamento">Quantidade:</label>
+                    <input type="number" id="quantidade-orcamento" name="quantidade-orcamento" min="1" required>
+
+                    <label for="valor-orcamento">Valor Estimado:</label>
+                    <input type="text" id="valor-orcamento" name="valor-orcamento" placeholder="R$ 0,00" required>
+
+                    <button type="submit">Criar Orçamento</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="budget-list" class="budget-list">
+            <h3>Orçamentos Pendentes</h3>
+            <!-- Orçamentos criados aparecerão aqui -->
+        </div>
+    </section>
+
+    <script src="orcamentos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
